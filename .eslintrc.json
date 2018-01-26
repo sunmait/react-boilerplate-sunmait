@@ -4,7 +4,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "webextensions": true
+    "webextensions": true,
+    "jest": true
   },
   "rules": {
     "no-console": ["error", { "allow" : ["warn", "error"] }],
@@ -29,6 +30,7 @@
     "compat/compat": "off",
     "consistent-return": "off",
     "arrow-body-style": "off",
+    "function-paren-newline": ["error", "multiline"],
     "import/prefer-default-export":"off",
     "jsx-a11y/anchor-is-valid":"off",
     "jsx-a11y/label-has-for": "off",

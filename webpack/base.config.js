@@ -40,7 +40,7 @@ module.exports = {
           use: [
             {loader: 'css-loader', options: {minimize: true}},
             'postcss-loader',
-            'less-loader'
+            'less-loader',
           ],
         }),
       },
@@ -57,18 +57,18 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
-      }
-    ]
+      },
+    ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(app, 'index.html')
+      template: path.resolve(app, 'index.html'),
     }),
 
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',
-      allChunks: true
+      allChunks: true,
     }),
 
     new webpack.optimize.CommonsChunkPlugin({
@@ -77,7 +77,7 @@ module.exports = {
       minChunks(module) {
         return module.context &&
           module.context.indexOf('node_modules') >= 0;
-      }
-    })
-  ]
+      },
+    }),
+  ],
 };

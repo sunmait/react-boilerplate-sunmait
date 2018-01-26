@@ -2,3 +2,6 @@
 
 Sunmait Technologies   
 https://sunmait.com
+
+## Run tests
+npm test
